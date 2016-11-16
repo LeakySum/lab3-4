@@ -1,22 +1,35 @@
 #include <iostream>
-#include <math.h>
-
+#include <stdlib.h>
 using namespace std;
 
 int main() {
-    double E=1e-6;
-    double Sum=0;
-    double sd;
-    double si;
-    int k=0;
+    int *M;
+    int n, k, i, j;
+    cout << "n=";
+    cin >> n;
+    M=(int*) malloc(n*sizeof(int));
 
+    for (i=0; i<n; i++){
+        M[i] = rand() % 15 +10;
+    }
 
-do { k++;
-    sd=(double)k/pow(k+2,2);
-    si=pow(-1,k);
-    Sum+=sd*si;
+    for (i=0; i<n; i++){
+        cout <<  M[i] <<" ";
+    }
+cout << endl;
+    for ( i=0; i<n; i++) {
+        for ( j = 0; j < (n-1); j++) {
+            if (M[j] > M[j + 1]) {
+                k = M[j];
+                M[j] = M[j+1];
+                M[j+1] = k;
+            }
+        }
 
-}while(sd>=E);
-    cout <<Sum<<endl;
+    }
+    for (i=0; i<n; i++){
+      cout <<  M[i] <<" ";
+    }
+
     return 0;
 }
