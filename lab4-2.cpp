@@ -25,11 +25,8 @@ int main() {
         }
         cout <<endl;
     }
-    for (i=0; i<n; i++){
-        cout <<  M[i] <<" ";
-    }
-    cout << endl;
-
+   
+    
     for ( i=0; i<n; i++) {
         for (j = 0; j < m; j++) {
             for (l = 0; l < (m - 1); l++) {
@@ -55,7 +52,9 @@ int main() {
 
         }
 
+
     }
+    cout << endl;
     for ( i=0; i<n; i++){
         for ( j=0; j<m; j++) {
             cout << M[i][j] << " ";
