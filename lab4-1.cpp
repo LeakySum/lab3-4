@@ -15,7 +15,7 @@ int main() {
 	}
 	
 	for (i = 0; i<n; i++) {
-		for (j = 0; j < (n - 1); j++) {
+		for (j = 0; j < (n -i- 1); j++) {
 			if (M[j] > M[j + 1]) {
 				k = M[j];
 				M[j] = M[j + 1];
