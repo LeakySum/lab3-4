@@ -28,7 +28,7 @@ int main() {
 
 	for (i = 0; i<n; i++) {
 		for (j = 0; j < m; j++) {
-			for (l = 0; l < (m - 1); l++) {
+			for (l = 0; l < (m -j- 1); l++) {
 				if (M[i][l] > M[i][l + 1]) {
 					k = M[i][l];
 					M[i][l] = M[i][l + 1];
